@@ -1,5 +1,8 @@
 # React Bookstore
+  React application that will help organize and manage a bookstore.
 
+# Live Link
+ - [Bookstore Live Demo](https://bookstore-jude-bereket.herokuapp.com/)
 # Built With 
 - React
 - React-DOM
@@ -8,7 +11,6 @@
 - npm
 - CSS
 - ES6
-
 
 # Authors
 
