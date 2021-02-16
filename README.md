@@ -6,11 +6,13 @@
 # Built With 
 - React
 - React-DOM
+- React-redux
 - Redux
 - PropTypes
 - npm
 - CSS
 - ES6
+- Eslint
 
 # Authors
 
