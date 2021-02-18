@@ -1,6 +1,6 @@
 import '../css/App.css';
-import {Provider} from 'react-redux'
-import store from '../store'
+import { Provider } from 'react-redux';
+import store from '../store';
 import BooksListComponent from '../containers/booksList';
 import BooksFormComponent from '../containers/booksForm';
 
