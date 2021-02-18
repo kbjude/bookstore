@@ -16,6 +16,7 @@ const BooksForm = () => {
           </option>
         ))}
       </select>
+      <button type="button">Add book</button>
     </form>
   );
 };
