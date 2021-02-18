@@ -1,12 +1,14 @@
 import '../css/App.css';
-import Bookslist from '../containers/booksList';
-import BooksForm from '../containers/booksForm'
+import BooksListComponent from '../containers/booksList';
+import BooksFormComponent from '../containers/booksForm';
 
 function App() {
   return (
     <div>
-      <BooksList />
-      <BooksForm />
+      <BooksListComponent />
+      <br />
+      <br />
+      <BooksFormComponent />
     </div>
   );
 }

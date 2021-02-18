@@ -1,20 +1,23 @@
-import React from 'react'
+import React from 'react';
 
-export const BooksForm = () => {
+const BooksForm = () => {
+  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-    const categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"]
-
-    return (
-        <form>
-            <label>
-                Title
-            </label>
-            <input name="title" placeholder="Title" type="text" />
-            <select name="category">
-                { categories.map(category => <option value={category}> {category} </option>)}
-            </select>
-        </form>
-    )
-}
+  return (
+    <form>
+      <label htmlFor="title">
+        Title:
+        <input name="title" placeholder="Title" type="text" id="title" />
+      </label>
+      <select name="category">
+        { categories.map(category => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
+      </select>
+    </form>
+  );
+};
 
 export default BooksForm;
