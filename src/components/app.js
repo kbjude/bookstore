@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import '../css/App.css';
 import { Provider } from 'react-redux';
 import store from '../store';
