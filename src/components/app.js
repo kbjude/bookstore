@@ -1,9 +1,12 @@
 import '../css/App.css';
+import Bookslist from '../containers/booksList';
+import BooksForm from '../containers/booksForm'
 
 function App() {
   return (
     <div>
-      <h1> Testing </h1>
+      <BooksList />
+      <BooksForm />
     </div>
   );
 }
