@@ -2,9 +2,19 @@ import React from 'react'
 
 export const BooksList = () => {
     return (
-        <div>
-            
-        </div>
+        <table>
+            <tr>
+                <th>
+                    Book ID
+                </th>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Category
+                </th>
+            </tr>    
+        </table>
     )
 }
 
