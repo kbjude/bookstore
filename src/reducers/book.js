@@ -1,6 +1,16 @@
 import * as bookTypes from '../actions/bookActionTypes';
 
-const initialState = [];
+const initialState = [{
+  id: Math.ceil(Math.random() * 1000),
+  title: "The Bible",
+  category: "Learning",
+},
+{
+  id: Math.ceil(Math.random() * 1000),
+  title: "Coding 101",
+  category: "Horror",
+}
+];
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
