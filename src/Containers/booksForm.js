@@ -11,7 +11,7 @@ export const BooksForm = () => {
             </label>
             <input name="title" placeholder="Title" type="text" />
             <select name="category">
-                { categories.map(category => <option> {category} </option>)}
+                { categories.map(category => <option value={category}> {category} </option>)}
             </select>
         </form>
     )
