@@ -5,7 +5,7 @@ const initialState = [];
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case bookTypes.CREATE_BOOK:
-      return;
+      return [...state, action.payload];
     case bookTypes.REMOVE_BOOK:
       return;
     default: return state;
