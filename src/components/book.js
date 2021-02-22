@@ -8,6 +8,7 @@ const Book = ({ id, title, category }) => (
     <td>{category}</td>
   </tr>
 );
+
 Book.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,

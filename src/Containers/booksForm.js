@@ -1,10 +1,12 @@
 import React from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { createBook } from '../actions';
 
 const BooksForm = () => {
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const [title, setTitle] = React.useState('');
   const [category, setCategory] = React.useState('');
+  const dispatch = useDispatch();
 
   const handleChange = e => {
     if (e.target.name === 'title') {
@@ -16,10 +18,12 @@ const BooksForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(e);
+    dispatch(createBook({
+      id: Math.ceil(Math.random() * 1000),
+      title,
+      category,
+    }));
   };
-  console.log(title);
-  console.log(category);
 
   return (
     <form onSubmit={handleSubmit}>
