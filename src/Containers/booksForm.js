@@ -1,6 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-
+// import { useDispatch } from 'react-redux';
 
 const BooksForm = () => {
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
@@ -17,7 +16,6 @@ const BooksForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('Where am i');
     console.log(e);
   };
   console.log(title);
