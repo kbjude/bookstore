@@ -10,7 +10,7 @@ const Book = ({
     <td>{category}</td>
     <td>
       <button type="button" onClick={() => onRemove({ id, title, category })}>Remove</button>
-      {' '}
+
     </td>
   </tr>
 );
