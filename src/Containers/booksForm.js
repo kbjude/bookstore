@@ -6,14 +6,14 @@ const BooksForm = () => {
   const [category, setCategory] = React.useState('');
 
   const handleChange = e => {
-    if(e.target.name === 'title'){
-    setTitle(e.target.value);
+    if (e.target.name === 'title') {
+      setTitle(e.target.value);
     } else {
       setCategory(e.target.value);
     }
-
   };
   console.log(title);
+  console.log(category);
 
   return (
     <form>
