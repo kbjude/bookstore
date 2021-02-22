@@ -1,9 +1,16 @@
+/* eslint-disable */
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/book';
+import { removeBook } from '../actions';
 
 const BooksList = () => {
   const books = useSelector(state => state.book);
+  const dispatch = useDispatch();
+  const handleRemoveBook = book => {
+    
+    console.log(book);
+  };
   return (
     <table>
       <thead>
@@ -15,7 +22,7 @@ const BooksList = () => {
       </thead>
       <tbody>
         {books.map(book => (
-          <Book key={book.id} id={book.id} title={book.title} category={book.category} />
+          <Book key={book.id} id={book.id} title={book.title} category={book.category} onRemove={handleRemoveBook} />
         ))}
       </tbody>
     </table>
