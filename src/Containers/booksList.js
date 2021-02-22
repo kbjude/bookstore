@@ -8,8 +8,7 @@ const BooksList = () => {
   const books = useSelector(state => state.book);
   const dispatch = useDispatch();
   const handleRemoveBook = book => {
-    
-    console.log(book);
+    dispatch(removeBook(book))
   };
   return (
     <table>
