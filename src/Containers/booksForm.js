@@ -12,11 +12,15 @@ const BooksForm = () => {
       setCategory(e.target.value);
     }
   };
+
+  const handleSubmit = e => {
+    console.log('Where am i');
+  };
   console.log(title);
   console.log(category);
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label htmlFor="title">
         Title:
         <input name="title" placeholder="Title" type="text" id="title-id" onChange={handleChange} />
