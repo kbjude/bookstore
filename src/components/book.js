@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -9,7 +8,10 @@ const Book = ({
     <td>{id}</td>
     <td>{title}</td>
     <td>{category}</td>
-    <td><button type="button" onClick={()=>onRemove({ id, title, category })}>Remove</button> </td>
+    <td>
+      <button type="button" onClick={() => onRemove({ id, title, category })}>Remove</button>
+      {' '}
+    </td>
   </tr>
 );
 
