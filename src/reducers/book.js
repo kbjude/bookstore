@@ -1,5 +1,6 @@
 import * as bookTypes from '../actions/bookActionTypes';
 
+
 const initialState = [{
   id: Math.ceil(Math.random() * 1000),
   title: 'The Bible',
