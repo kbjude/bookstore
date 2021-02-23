@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 const CategoryFilter = ({ filter }) => {
   const categories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  const [category, setCategory] = React.useState(categories[0]);
   return (
     <div>
-      <select name="category">
+      <select name="category" onChange={setCategory(e => e.target.value)}>
         {categories.map(category => (
           <option key={category}>
             {category}

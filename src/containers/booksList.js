@@ -11,8 +11,8 @@ const BooksList = () => {
     dispatch(removeBook(book));
   };
 
-  const handleFilterChange = () => {
-    dispatch(changeFilter('Horror'));
+  const handleFilterChange = category => {
+    dispatch(changeFilter(category));
   };
   console.log(useSelector(state => state.filter));
 
