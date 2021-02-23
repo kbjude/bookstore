@@ -11,6 +11,8 @@ const CategoryFilter = () => {
           </option>
         ))}
       </select>
+      <button type="button"> Search </button>
+      <br />
     </div>
   );
 };
