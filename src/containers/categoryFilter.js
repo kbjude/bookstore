@@ -16,7 +16,7 @@ const CategoryFilter = ({ filter }) => {
           </option>
         ))}
       </select>
-      <button type="button" onClick={() => filter(category)}> Search </button>
+      <button type="button" onClick={() => filter(category)}> Filter </button>
       <br />
     </div>
   );
