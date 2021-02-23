@@ -14,7 +14,7 @@ const BooksList = () => {
   const handleFilterChange = category => {
     dispatch(changeFilter(category));
   };
-  console.log(useSelector(state => state.filter));
+  const filteredBook = useSelector(state => state.filter);
 
   return (
     <>
@@ -29,7 +29,7 @@ const BooksList = () => {
           </tr>
         </thead>
         <tbody>
-          {books.map(book => (
+          {books.filter(book => (filteredBook === 'All' ? book : book.category === filteredBook)).map(book => (
             <Book
               key={book.id}
               id={book.id}
