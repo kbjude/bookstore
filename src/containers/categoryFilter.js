@@ -6,7 +6,10 @@ const CategoryFilter = ({ filter }) => {
   const [category, setCategory] = React.useState(categories[0]);
   return (
     <div>
-      <select name="category" onChange={setCategory()}>
+      <select
+        name="category"
+        onChange={e => setCategory(e.target.value)}
+      >
         {categories.map(category => (
           <option key={category}>
             {category}
