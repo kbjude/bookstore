@@ -6,14 +6,14 @@ const CategoryFilter = ({ filter }) => {
   const [category, setCategory] = React.useState(categories[0]);
   return (
     <div>
-      <select name="category" onChange={setCategory(e => e.target.value)}>
+      <select name="category" onChange={setCategory()}>
         {categories.map(category => (
           <option key={category}>
             {category}
           </option>
         ))}
       </select>
-      <button type="button" onClick={() => filter()}> Search </button>
+      <button type="button" onClick={() => filter(category)}> Search </button>
       <br />
     </div>
   );
