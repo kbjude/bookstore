@@ -14,6 +14,32 @@
 - ES6
 - Eslint
 
+# Getting Started <a name = "gs"></a>
+
+To get a local copy of the repository please run the following commands on your terminal:
+
+```
+$ cd <folder>
+```
+
+~~~bash
+$ git clone https://github.com/kbjude/bookstore.git
+$ cd bookstore
+
+
+~~~
+
+To run on the local server
+
+~~~bash
+$ npm i
+$ npm start
+~~~
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+
 # Authors
 
 👤 Jude Kajura
