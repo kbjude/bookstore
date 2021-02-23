@@ -2,17 +2,17 @@
 import '../css/App.css';
 import { Provider } from 'react-redux';
 import store from '../store';
-import BooksListComponent from '../containers/booksList';
-import BooksFormComponent from '../containers/booksForm';
+import BooksList from '../containers/booksList';
+import BooksForm from '../containers/booksForm';
 
 function App() {
   return (
     <Provider store={store}>
       <div>
-        <BooksListComponent />
+        <BooksList />
         <br />
         <br />
-        <BooksFormComponent />
+        <BooksForm />
       </div>
     </Provider>
   );
