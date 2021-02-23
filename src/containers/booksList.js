@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/book';
-import { removeBook } from '../actions';
+import { removeBook, changeFilter } from '../actions';
 import CategoryFilter from './categoryFilter';
 
 const BooksList = () => {
@@ -12,8 +12,9 @@ const BooksList = () => {
   };
 
   const handleFilterChange = () => {
-    console.log('Filter Testing here');
+    dispatch(changeFilter('Horror'));
   };
+  console.log(useSelector(state => state.filter));
 
   return (
     <>
