@@ -10,9 +10,14 @@ const BooksList = () => {
   const handleRemoveBook = book => {
     dispatch(removeBook(book));
   };
+
+  const handleFilterChange = () => {
+    console.log('Filter Testing here');
+  };
+
   return (
     <>
-      <CategoryFilter />
+      <CategoryFilter filter={handleFilterChange} />
       <table>
         <thead>
           <tr>

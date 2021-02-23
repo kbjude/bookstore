@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const CategoryFilter = () => {
+const CategoryFilter = ({ filter }) => {
   const categories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   return (
     <div>
@@ -11,10 +12,14 @@ const CategoryFilter = () => {
           </option>
         ))}
       </select>
-      <button type="button"> Search </button>
+      <button type="button" onClick={() => filter()}> Search </button>
       <br />
     </div>
   );
+};
+
+CategoryFilter.propTypes = {
+  filter: PropTypes.func.isRequired,
 };
 
 export default CategoryFilter;
