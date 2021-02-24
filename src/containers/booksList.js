@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/book';
-import { removeBook } from '../actions';
+import { removeBook, changeFilter } from '../actions';
+import CategoryFilter from '../components/categoryFilter';
 
 const BooksList = () => {
   const books = useSelector(state => state.book);
@@ -9,28 +10,37 @@ const BooksList = () => {
   const handleRemoveBook = book => {
     dispatch(removeBook(book));
   };
+
+  const handleFilterChange = category => {
+    dispatch(changeFilter(category));
+  };
+  const filteredBook = useSelector(state => state.filter);
+
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Book ID</th>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        {books.map(book => (
-          <Book
-            key={book.id}
-            id={book.id}
-            title={book.title}
-            category={book.category}
-            onRemove={handleRemoveBook}
-          />
-        ))}
-      </tbody>
-    </table>
+    <>
+      <CategoryFilter filter={handleFilterChange} />
+      <table>
+        <thead>
+          <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {books.filter(book => (filteredBook === 'All' ? book : book.category === filteredBook)).map(book => (
+            <Book
+              key={book.id}
+              id={book.id}
+              title={book.title}
+              category={book.category}
+              onRemove={handleRemoveBook}
+            />
+          ))}
+        </tbody>
+      </table>
+    </>
   );
 };
 

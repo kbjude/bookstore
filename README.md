@@ -39,14 +39,13 @@ $ npm start
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-
 # Authors
 
 👤 Jude Kajura
 
-GitHub: [@kbjude](https://github.com/kbjude)
-Twitter:[@balindakj](https://twitter.com/balindakj)
-LinkedIn: [kajura-jude](https://www.linkedin.com/feed/)
+- GitHub: [@kbjude](https://github.com/kbjude)
+- Twitter:[@balindakj](https://twitter.com/balindakj)
+- LinkedIn: [kajura-jude](https://www.linkedin.com/feed/)
 
 👤 **Bereket Beshane**
 
