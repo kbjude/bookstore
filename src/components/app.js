@@ -9,8 +9,8 @@ import NavbarComponent from '../utils/navbar';
 function App() {
   return (
     <Provider store={store}>
-      <NavbarComponent/>
-      <div className='px-custom'>
+      <NavbarComponent />
+      <div className="px-custom">
         <BooksList />
         <br />
         <br />

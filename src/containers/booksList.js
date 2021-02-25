@@ -1,29 +1,27 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import Book from "../components/book";
-import { removeBook, changeFilter } from "../actions";
-import CategoryFilter from "../components/categoryFilter";
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import Book from '../components/book';
+import { removeBook, changeFilter } from '../actions';
+import CategoryFilter from '../components/categoryFilter';
 
 const BooksList = () => {
-  const books = useSelector((state) => state.book);
+  const books = useSelector(state => state.book);
   const dispatch = useDispatch();
-  const handleRemoveBook = (book) => {
+  const handleRemoveBook = book => {
     dispatch(removeBook(book));
   };
 
-  const handleFilterChange = (category) => {
+  const handleFilterChange = category => {
     dispatch(changeFilter(category));
   };
-  const filteredBook = useSelector((state) => state.filter);
+  const filteredBook = useSelector(state => state.filter);
 
   return (
     <>
       <CategoryFilter filter={handleFilterChange} />
       {books
-        .filter((book) =>
-          filteredBook === "All" ? book : book.category === filteredBook
-        )
-        .map((book) => (
+        .filter(book => (filteredBook === 'All' ? book : book.category === filteredBook))
+        .map(book => (
           <Book
             key={book.id}
             id={book.id}
