@@ -1,9 +1,14 @@
+:root {
+  --blue: #0290ff;
+  --white-1: #fafafa;
+}
+
 body {
-  background: #fafafa;
+  background: var(--white-1)
 }
 
 .azure {
-  color: #0290ff;
+  color: var(--blue);
 }
 
 .nav-bg {
@@ -18,3 +23,22 @@ body {
 .app {
   text-align: center;
 }
+
+.circle-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background: rgb(219, 215, 215);
+  border-radius: 50%;
+}
+
+.circle-inside {
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+}
+
+
