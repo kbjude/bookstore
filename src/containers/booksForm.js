@@ -32,16 +32,16 @@ const BooksForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <h4>ADD NEW BOOK</h4>
-      <div className="row">
+      <div className="row form-group">
         <input name="title" className="col-12 col-md-6 form-control" placeholder="BookTitle" type="text" id="title-id" onChange={handleChange} required />
-        <select name="category" onChange={handleChange}>
+        <select name="category" className="col-12 col-md-3 form-control" onChange={handleChange}>
           { categories.map(category => (
             <option key={category} value={category}>
               {category}
             </option>
           ))}
         </select>
-        <button type="submit">Add book</button>
+        <button className="col-12 col-md-3" type="submit">Add book</button>
       </div>
     </form>
   );
