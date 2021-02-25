@@ -34,7 +34,7 @@ const BooksForm = () => {
       <h4>ADD NEW BOOK</h4>
       <div className="row form-group mx-0">
         <input name="title" className="col-12 col-md-6 form-control" placeholder="BookTitle" type="text" id="title-id" onChange={handleChange} required />
-        <select name="category" className="col-12 col-md-3 mx-md-5 form-control" onChange={handleChange}>
+        <select name="category" className="col-12 col-md-3 mx-md-4 form-control" onChange={handleChange}>
           { categories.map(category => (
             <option key={category} value={category}>
               {category}
