@@ -1,3 +1,20 @@
+body {
+  background: #fafafa;
+}
+
+.azure {
+  color: #0290ff;
+}
+
+.nav-bg {
+  background: white;
+}
+
+.px-custom {
+  padding: 0 7rem;
+}
+
+
 .app {
   text-align: center;
 }

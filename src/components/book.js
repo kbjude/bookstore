@@ -9,8 +9,7 @@ const Book = ({
     <td>{title}</td>
     <td>{category}</td>
     <td>
-      <button type="button" onClick={() => onRemove({ id, title, category })}>Remove</button>
-
+      <button className="btn btn-dark" type="button" onClick={() => onRemove({ id, title, category })}>Remove</button>
     </td>
   </tr>
 );
