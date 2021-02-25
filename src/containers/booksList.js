@@ -17,7 +17,7 @@ const BooksList = () => {
   const filteredBook = useSelector(state => state.filter);
 
   return (
-    <>
+    <section className="mb-5">
       <CategoryFilter filter={handleFilterChange} />
       {books
         .filter(book => (filteredBook === 'All' ? book : book.category === filteredBook))
@@ -30,7 +30,7 @@ const BooksList = () => {
             onRemove={handleRemoveBook}
           />
         ))}
-    </>
+    </section>
   );
 };
 

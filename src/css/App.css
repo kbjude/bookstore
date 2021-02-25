@@ -4,7 +4,8 @@
 }
 
 body {
-  background: var(--white-1)
+  background: var(--white-1);
+  padding: 0 0 4rem 0;
 }
 
 .azure {
@@ -18,7 +19,6 @@ body {
 .px-custom {
   padding: 0 7rem;
 }
-
 
 .app {
   text-align: center;
@@ -40,5 +40,3 @@ body {
   background: white;
   border-radius: 50%;
 }
-
-

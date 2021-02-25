@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from '../store';
 import BooksList from '../containers/booksList';
 import BooksForm from '../containers/booksForm';
-import NavbarComponent from '../utils/navbar';
+import NavbarComponent from './navbar';
 
 function App() {
   return (
@@ -12,8 +12,7 @@ function App() {
       <NavbarComponent />
       <div className="px-custom">
         <BooksList />
-        <br />
-        <br />
+        <hr />
         <BooksForm />
       </div>
     </Provider>
