@@ -1,3 +1,42 @@
+:root {
+  --blue: #0290ff;
+  --white-1: #fafafa;
+}
+
+body {
+  background: var(--white-1);
+  padding: 0 0 4rem 0;
+}
+
+.azure {
+  color: var(--blue);
+}
+
+.nav-bg {
+  background: white;
+}
+
+.px-custom {
+  padding: 0 7rem;
+}
+
 .app {
   text-align: center;
+}
+
+.circle-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background: rgb(219, 215, 215);
+  border-radius: 50%;
+}
+
+.circle-inside {
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
 }

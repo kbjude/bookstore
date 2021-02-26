@@ -3,7 +3,15 @@ import { useDispatch } from 'react-redux';
 import { createBook } from '../actions';
 
 const BooksForm = () => {
-  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  const categories = [
+    'Action',
+    'Biography',
+    'History',
+    'Horror',
+    'Kids',
+    'Learning',
+    'Sci-Fi',
+  ];
   const [title, setTitle] = React.useState('');
   const [category, setCategory] = React.useState(categories[0]);
   const dispatch = useDispatch();
@@ -18,31 +26,49 @@ const BooksForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (e.target.title.value === '') { return false; }
-    dispatch(createBook({
-      id: Math.ceil(Math.random() * 1000),
-      title,
-      category,
-    }));
+    if (e.target.title.value === '') {
+      return false;
+    }
+    dispatch(
+      createBook({
+        id: Math.ceil(Math.random() * 1000),
+        title,
+        category,
+      }),
+    );
     setTitle('');
     e.target.title.value = '';
     return true;
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="title">
-        Title:
-        <input name="title" placeholder="Title" type="text" id="title-id" onChange={handleChange} required />
-      </label>
-      <select name="category" onChange={handleChange}>
-        { categories.map(category => (
-          <option key={category} value={category}>
-            {category}
-          </option>
-        ))}
-      </select>
-      <button type="submit">Add book</button>
+    <form className="mt-4" onSubmit={handleSubmit}>
+      <h4 className="text-secondary">ADD NEW BOOK</h4>
+      <div className="row form-group mx-0">
+        <input
+          name="title"
+          className="col-12 col-md-5 form-control"
+          placeholder="BookTitle"
+          type="text"
+          id="title-id"
+          onChange={handleChange}
+          required
+        />
+        <select
+          name="category"
+          className="col-12 col-md-4 mx-md-5 form-control"
+          onChange={handleChange}
+        >
+          {categories.map(category => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
+        </select>
+        <button className="col-12 col-md-2 btn btn-info" type="submit">
+          Add book
+        </button>
+      </div>
     </form>
   );
 };

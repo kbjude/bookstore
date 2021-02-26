@@ -17,30 +17,20 @@ const BooksList = () => {
   const filteredBook = useSelector(state => state.filter);
 
   return (
-    <>
+    <section className="mb-5">
       <CategoryFilter filter={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {books.filter(book => (filteredBook === 'All' ? book : book.category === filteredBook)).map(book => (
-            <Book
-              key={book.id}
-              id={book.id}
-              title={book.title}
-              category={book.category}
-              onRemove={handleRemoveBook}
-            />
-          ))}
-        </tbody>
-      </table>
-    </>
+      {books
+        .filter(book => (filteredBook === 'All' ? book : book.category === filteredBook))
+        .map(book => (
+          <Book
+            key={book.id}
+            id={book.id}
+            title={book.title}
+            category={book.category}
+            onRemove={handleRemoveBook}
+          />
+        ))}
+    </section>
   );
 };
 
